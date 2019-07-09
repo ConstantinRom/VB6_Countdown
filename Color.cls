@@ -29,22 +29,20 @@ Public Sub RGB(red As Integer, green As Integer, blue As Integer)
 End Sub
 
 Public Sub RGBStr(col As String)
-    On Error GoTo ErrorHandler
-    Dim splittedcol As String
+    
+    Dim splittedcol() As String
     splittedcol = Split(col, " ")
     r = splittedcol(0)
     g = splittedcol(1)
     b = splittedcol(2)
-ErrorHandler:
-    MsgBox "String is not RGB fromat 'R G B (example : 255 0 0 0)' or wrong datatype. Reinit Class to R=0 G=0 B=0", vbCritical
-    Class_Initialize
+
 
 End Sub
 
 Public Sub ARGBStr(col As String)
     On Error GoTo ErrorHandler
     Dim splittedcol As String
-    splittedcol = Split(col, " ")
+    splittedcol() = Split(col, " ")
     a = splittedcol(0)
     r = splittedcol(1)
     g = splittedcol(2)
@@ -68,7 +66,7 @@ Public Sub ARGB(alpha As Integer, red As Integer, green As Integer, blue As Inte
     a = alpha
     r = red
     g = green
-    b = blue´
+    b = blue
 
 End Sub
 
